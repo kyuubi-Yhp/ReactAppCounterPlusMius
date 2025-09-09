@@ -5,6 +5,7 @@ import Button from './components/Button/Button'
 import Logs from './components/Logs/Logs'
 import './App.css'
 
+const logTitle = 'Логи'
 const INITIAL_COUNTER = 0
 const COUNTER_STEP = 1
 const MAX_COUNTER_VALUE = 5
@@ -62,6 +63,7 @@ function App() {
         onClick={obnal}
       />
       <Logs
+        title={logTitle}
         logs={logs}
       />
     </div>
