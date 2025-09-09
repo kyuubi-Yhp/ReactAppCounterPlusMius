@@ -16,13 +16,15 @@ function App() {
 
 
   function handelPlusButtonClick() {
-    setCounter(counter + COUNTER_STEP)
-    setLogs([...logs, counter + COUNTER_STEP])
+    const newCounter = counter + COUNTER_STEP
+    setCounter(newCounter)
+    setLogs([...logs, newCounter])
   }
 
   function handelMinusButtonClicktwo() {
-    setCounter(counter - COUNTER_STEP)
-    setLogs([...logs, counter - COUNTER_STEP])
+    const newCounter = counter - COUNTER_STEP
+    setCounter(newCounter)
+    setLogs([...logs, newCounter])
   }
   function isdisableminus() {
     return counter <= MIN_COUNTER_VALUE
@@ -31,9 +33,9 @@ function App() {
     return counter >= MAX_COUNTER_VALUE
   }
   function obnal() {
-    const counter = 0
+    const newCounter = 0
     setCounter(INITIAL_COUNTER)
-    setLogs([...logs, counter])
+    setLogs([...logs, newCounter])
   }
   function isCounterLimit() {
     return counter <= MIN_COUNTER_VALUE || counter >= MAX_COUNTER_VALUE
