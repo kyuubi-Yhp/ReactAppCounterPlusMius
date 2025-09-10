@@ -1,8 +1,7 @@
-
 import { useState } from 'react'
 import Counter from './components/Counter/Counter'
 import Button from './components/Button/Button'
-import Logs from './components/Logs/Logs'
+import Logs from './components/LogsList/LogsList'
 import './App.css'
 
 const logTitle = 'Логи'
@@ -17,15 +16,25 @@ function App() {
 
 
   function handelPlusButtonClick() {
-    const newCounter = counter + COUNTER_STEP
-    setCounter(newCounter)
-    setLogs([...logs, newCounter])
+    const newValue = counter + COUNTER_STEP
+    const log = {
+      action: 'plus',
+      prevValue: counter,
+      value: newValue
+    }
+    setCounter(newValue)
+    setLogs([...logs, log])
   }
 
   function handelMinusButtonClicktwo() {
-    const newCounter = counter - COUNTER_STEP
-    setCounter(newCounter)
-    setLogs([...logs, newCounter])
+    const newValue = counter - COUNTER_STEP
+    const log = {
+      action: 'minus',
+      prevValue: counter,
+      value: newValue
+    }
+    setCounter(newValue)
+    setLogs([...logs, log])
   }
   function isdisableminus() {
     return counter <= MIN_COUNTER_VALUE
@@ -34,9 +43,14 @@ function App() {
     return counter >= MAX_COUNTER_VALUE
   }
   function obnal() {
-    const newCounter = 0
+    const newValue = 0
+    const log = {
+      action: 'обнуление',
+      prevValue: counter,
+      value: newValue
+    }
     setCounter(INITIAL_COUNTER)
-    setLogs([...logs, newCounter])
+    setLogs([...logs, log])
   }
   function isCounterLimit() {
     return counter <= MIN_COUNTER_VALUE || counter >= MAX_COUNTER_VALUE
