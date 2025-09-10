@@ -9,6 +9,11 @@ const INITIAL_COUNTER = 0
 const COUNTER_STEP = 1
 const MAX_COUNTER_VALUE = 5
 const MIN_COUNTER_VALUE = -5
+const ACTION_VALUE = {
+  plus: 'plus',
+  minus: 'minus',
+  obnal: 'obnal'
+}
 
 function App() {
   const [counter, setCounter] = useState(INITIAL_COUNTER)
@@ -18,7 +23,8 @@ function App() {
   function handelPlusButtonClick() {
     const newValue = counter + COUNTER_STEP
     const log = {
-      action: 'plus',
+      id: crypto.randomUUID(),
+      action: ACTION_VALUE.plus,
       prevValue: counter,
       value: newValue
     }
@@ -29,7 +35,8 @@ function App() {
   function handelMinusButtonClicktwo() {
     const newValue = counter - COUNTER_STEP
     const log = {
-      action: 'minus',
+      id: crypto.randomUUID(),
+      action: ACTION_VALUE.minus,
       prevValue: counter,
       value: newValue
     }
@@ -45,7 +52,8 @@ function App() {
   function obnal() {
     const newValue = 0
     const log = {
-      action: 'обнуление',
+      id: crypto.randomUUID(),
+      action: ACTION_VALUE.obnal,
       prevValue: counter,
       value: newValue
     }

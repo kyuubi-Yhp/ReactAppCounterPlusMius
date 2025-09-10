@@ -3,9 +3,9 @@ function Logs(props) {
   return (
     <div>
       <h2>{props.title}</h2>
-      {props.logs.map(function(item, indexKye) {
+      {props.logs.map(function(item) {
         return (
-          <div key={indexKye}>
+          <div key={item.id}>
             <p>действие: {item.action}</p>
             <p>предыдущие значение: {item.prevValue}</p>
             <p>новое значение: {item.value}</p>
