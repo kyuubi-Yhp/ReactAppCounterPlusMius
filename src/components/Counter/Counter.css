@@ -1,7 +1,20 @@
 .counter__danger {
-  color: red;
+  color: rgba(254, 33, 33, 0.856);
+  font-size: 25px;
+  margin: 0 0 10px 0;
 }
 
 .counter {
-  color: green;
+  color: rgba(255, 255, 255, 0.798);
+  font-size: 25px;
+  margin: 0 0 10px 0;
+}
+.counter, .counter__danger {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(27, 82, 27);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

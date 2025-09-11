@@ -1,0 +1,10 @@
+
+.container__app {
+  width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+

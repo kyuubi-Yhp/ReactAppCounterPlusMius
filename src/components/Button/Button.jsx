@@ -2,8 +2,8 @@ import './Button.css'
 function Button(props) {
 
   return (
-    <div>
-      <button 
+    <div className='btn'>
+      <button className='button'
       disabled={props.disebl}
       onClick={props.onClick}
       >{props.text}</button>
